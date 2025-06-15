@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CS:GO Navbar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header contener">
+    <div class="container">
+      <nav class="nav-left">
+        <ul>
+          <li><a href="#" class="active">Blog</a></li>
+          <li><a href="#">Updates</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+       <input type="text"class="input">
+      </nav>
+
+      <div class="nav-right">
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="dropdown-toggle" id="dropdownBtn">English ▾</button>
+          <ul class="dropdown-menu" id="dropdownMenu">
+            <li><a href="#" onclick="setLanguage('English')">English</a></li>
+            <li><a href="#" onclick="setLanguage('Русский')">Русский</a></li>
+            <li><a href="#" onclick="setLanguage('العربية')">العربية</a></li>
+            <li><a href="#" onclick="setLanguage('O‘zbekcha')">O‘zbekcha</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    function setLanguage(lang) {
+      document.getElementById("dropdownBtn").textContent = lang + " ▾";
+      document.getElementById("dropdownMenu").classList.remove("show");
+    }
+
+    window.addEventListener("click", function(e) {
+      if (!e.target.matches('.dropdown-toggle')) {
+        document.getElementById("dropdownMenu").classList.remove("show");
+      }
+    });
+  </script>
+    <section class="section contener">
+        <div class="div"></div>
+        <div class="div1">
+            <img src="facebook 1.png" alt="" class="img">
+            <img src="shatteredweb_blog_image 1.png" alt="">
+            <img src="bf_blog_image 1.png" alt="">
+        </div>
+        <div class="div3">
+            <div class="div2">
+                <h1 class="h1">PGL Antwerp 2022 Champions!</h1>
+                <img src="antwerp2022_champions_stickers 1.png" alt="" class="img1">
+                <p class="p1">This weekend, thousands of screaming fans in Antwerp and  millions of viewers around the world witnessed the crowning  of a new Major Champion. Congratulations to FaZe Clan who proved to be an unstoppable force, taking the Grand Fin2-0.
+                Today we’re releasing the champions autograph  capsule, featuring autograph stickers in paper, glitter, holo, and gold. Celebrate rain, karrigan, broky, ropz, and Twistzz by supporting them in  style–50% of the proceeds are shared with the</p>
+                
+                <h1 class="h2">The stage is set in Antwerp</h1>
+                <img src="antwerp2022_champions_stickers 1 (1).png" alt="" class="img2">
+                <p class="p2">The Legends stage was a brutal test, but eight teams survived and earned their place on the main stage. Congratulations to Team Spirit, ENCE, Copenhagen Flames, FaZe, FURIA, Heroic, Natus Vincere, and Ninjas in Pyjamas. They’ll play out the rest of this event in front of the roaring crowds in Antwerp. Best of luck to all!
+                Matches start Thursday, so you still have a few hours to make your picks in the Pick’Em Challenge. Earn souvenir tokens (or purchase some more), and support for your favorite teams</p>
+            </div>
+        </div>
+    </section>
+            <footer class="site-footer contener">
+        <div class="footer-container">
+            <div class="footer-left">
+            <img src="image 1 (5).png" alt="" class="footer-icon">
+            </div>
+            <div class="footer-right">
+            <ul class="footer-list">
+                <li id="id">BLOG</li>
+                <li>UPDATES</li>
+                <li>RESOURCES</li>
+                <li>COMMUNITY</li>
+            </ul>
+            </div>
+        </div>
+        </footer>
+</body>
+</html>
